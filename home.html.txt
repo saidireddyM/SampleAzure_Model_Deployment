@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+
+<body>
+ <div class="login">
+	<h1>Iris data classification predictions</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+
+    <form action="{{ url_for('predict')}}"method="post">
+
+
+    	<input type="text" name="island" placeholder="Enter Island" required="required" /><br>
+        <input type="text" name="bill_length_mm" placeholder="Enter Bill Length" required="required" /><br>
+        <input type="text" name="bill_depth_mm" placeholder="Enter Bill Depth" required="required" /><br>
+        <input type="text" name="flipper_length_mm" placeholder="Enter Flipper Length" required="required" /><br>
+        <input type="text" name="body_mass_g" placeholder="Enter Body Mass" required="required" /><br>
+        <input type="text" name="sex" placeholder="Enter sex" required="required" /><br>
+
+
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
